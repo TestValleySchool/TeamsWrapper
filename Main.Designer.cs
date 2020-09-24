@@ -30,6 +30,7 @@
         {
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.label = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // progressBar
@@ -48,11 +49,22 @@
             this.label.TabIndex = 1;
             this.label.Text = "Looking for Teams...";
             // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(201, 91);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(97, 34);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.Text = "&Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 88);
+            this.ClientSize = new System.Drawing.Size(495, 137);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.progressBar);
             this.Name = "Main";
@@ -66,6 +78,7 @@
 
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button closeButton;
     }
 }
 
